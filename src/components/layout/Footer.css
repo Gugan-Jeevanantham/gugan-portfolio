@@ -1,0 +1,102 @@
+.footer {
+  position: relative;
+  padding-block: var(--space-3) var(--space-3);
+  border-top: 1px solid var(--border-hairline);
+  overflow: hidden;
+  text-align: center;
+}
+
+.footer__glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background: var(--accent-gradient);
+  filter: blur(120px);
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.footer__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.footer__social-link {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-hairline);
+  color: var(--text-muted);
+  font-size: 1.8rem;
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.footer__social-link:hover {
+  color: var(--bg-void);
+  background: var(--accent-gradient);
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.footer__signature {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.02em;
+}
+
+.footer__command {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--accent-cyan);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glow);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: var(--space-3);
+  cursor: pointer;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.footer__command:hover {
+  background: var(--bg-surface-raised);
+  border-color: var(--accent-cyan);
+}
+
+.footer__command-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background: var(--accent-cyan);
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.footer__copyright {
+  font-size: 1.3rem;
+  color: var(--text-faint);
+}
