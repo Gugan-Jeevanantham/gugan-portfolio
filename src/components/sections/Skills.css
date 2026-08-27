@@ -196,18 +196,17 @@
     font-size: 1.1rem;
   }
 
-  .skills__ticker {
-    margin-top: var(--space-3);
-    padding-block: var(--space-2);
-  }
-
-  .skills__ticker-track {
-    gap: var(--space-2);
-  }
-  
   .skills__ticker-pill {
-    font-size: 1rem;
-    padding: 6px 12px;
+    font-size: 0.85rem !important;
+    padding: 5px 10px !important;
+    border-radius: 6px !important;
+  }
+  .skills__ticker-track {
+    gap: 8px !important;
+  }
+  .skills__ticker {
+    margin-top: var(--space-2) !important;
+    padding-block: 6px !important;
   }
 }
 

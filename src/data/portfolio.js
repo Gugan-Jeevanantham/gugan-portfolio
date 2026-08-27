@@ -12,7 +12,7 @@ export const profile = {
     github: "https://github.com/Gugan-Jeevanantham",
     whatsapp:
       "https://wa.me/9944717243?text=Hi%20Gugan%2C%20I'm%20interested%20in%20discussing%20a%20job%20opportunity%20with%20you.",
-    instagram: "https://www.instagram.com/gugan_jeevanantham",
+    instagram: "https://www.instagram.com/__g__u__g__a__n__?igsi=ZmgzYWhwaHh2Zmdy",
   },
 };
 
@@ -71,6 +71,7 @@ export const experience = [
       "Architected reusable Tree View/Tree List components with Kendo UI React wrappers, using hooks for clean state and lifecycle management.",
       "Optimized data-heavy grids processing 10,000+ records — a 40% performance boost and 35% faster rendering through DOM refactoring.",
       "Resolved 120+ production defects while sustaining a 95% first-response rate across Agile sprints.",
+      "Collaborated closely with backend and QA teams to integrate REST APIs and ensure cross-browser compatibility across Chrome, Edge, and Firefox for enterprise clients.",
     ],
     tags: ["HTML5", "CSS3", "JavaScript", "React JS", "Tailwind CSS", "SQL", "API"],
   },
@@ -83,6 +84,7 @@ export const experience = [
       "Delivered CGST/SGST/IGST tax calculation logic and real-time dashboards for billing, labour, and project monitoring.",
       "Wrote and optimized SQL stored procedures to manage large-scale project and billing datasets.",
       "Owned client-reported issue resolution, delivering timely production support across live ERP deployments.",
+      "Participated in requirement analysis and code review sessions, translating client-specific billing rules into scalable, maintainable JavaScript modules.",
     ],
     tags: ["HTML5", "CSS3", "JavaScript", "jQuery", "SQL", "API"],
   },
@@ -95,6 +97,7 @@ export const experience = [
       "Contributed to Billing, Labour, and Tax Invoice screens under senior developer mentorship.",
       "Performed UI testing, data validation, and bug fixing across live enterprise workflows.",
       "Absorbed end-to-end SDLC practices — requirement analysis through production support.",
+      "Practiced version control workflows using Git and GitHub, maintaining clean commit history while collaborating with senior team members.",
     ],
     tags: ["HTML5", "CSS3", "JavaScript", "SQL"],
   },

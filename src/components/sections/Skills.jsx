@@ -92,8 +92,8 @@ export default function Skills() {
           <h2>
             TECHNICAL <span className="gradient-text">SKILLS</span>
           </h2>
-          {/* <p>Technologies I excel at and continuously master</p> */}
-        </div>
+<p>TOOLS AND TECHNOLOGIES I USE TO BUILD SCALABLE, PRODUCTION-READY APPLICATIONS</p>        
+</div>
 
         <div className="skills__icon-grid">
           {skillsList.map((skill, i) => (

@@ -52,6 +52,7 @@ export default function Experience() {
           <h2>
             WORK <span className="gradient-text">EXPERIENCE</span>
           </h2>
+                    <p>A TIMELINE OF ROLES WHERE I BUILT, OPTIMIZED, AND SHIPPED REAL-WORLD ERP SOLUTIONS</p>
         </div>
 
         <div className="experience__timeline">
