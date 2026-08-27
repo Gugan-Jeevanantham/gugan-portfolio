@@ -140,7 +140,7 @@ export const projects = {
       name: "AI Document Q&A",
       description: "A full-stack Q&A app that answers strictly from an uploaded PDF's content — no hallucinated or out-of-context responses.",
       tech: ["React", "Node.js", "Express", "Groq"],
-      link: "https://ai-document-qa-orpin.vercel.app/",
+      link: "https://gugan-jeevanantham.github.io/ai-document-qa/",
       icon: "FaRobot",
       color: "#00d9ff",
     },
