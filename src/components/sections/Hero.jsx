@@ -243,7 +243,7 @@ export default function Hero() {
             style={{ transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg)` }}
           >
                 <div className="hero__image-glow" />
-                <img src="/Profile.jpeg" alt={profile.name} className="hero__image" />
+                <img src={`${import.meta.env.BASE_URL}Profile.jpeg`} alt={profile.name} className="hero__image" />
                 <div className="hero__image-ring" />
           </div>
         </motion.div>
