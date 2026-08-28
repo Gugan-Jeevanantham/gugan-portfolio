@@ -4,10 +4,7 @@ import "./Loader.css";
 
 export default function Loader() {
   const progress = useMotionValue(0);
-  const displayProgress = useTransform(progress, (value) =>
-    Math.round(value)
-  );
-
+  const displayProgress = useTransform(progress, (value) => Math.round(value));
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
@@ -15,13 +12,11 @@ export default function Loader() {
       setPercentage(value);
     });
 
-    // 0 → 80 quickly
     const quickLoad = animate(progress, 80, {
       duration: 0.8,
       ease: "easeOut",
     });
 
-    // 80 → 100 slowly after reaching 80
     const timer = setTimeout(() => {
       animate(progress, 100, {
         duration: 3,
@@ -40,26 +35,39 @@ export default function Loader() {
     <motion.div
       className="loader"
       initial={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
     >
+      <div className="loader__grid" aria-hidden="true" />
+      <div className="loader__glow" aria-hidden="true" />
+
+      <span className="loader__corner loader__corner--tl" />
+      <span className="loader__corner loader__corner--tr" />
+      <span className="loader__corner loader__corner--bl" />
+      <span className="loader__corner loader__corner--br" />
+
       <div className="loader__content">
+        <motion.div
+          className="loader__mark"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {/* GJ<span className="loader__mark-dot">.</span> */}
+        </motion.div>
 
         <div className="loader__top">
-          <span className="loader__label">
-            INITIALIZING PORTFOLIO
-          </span>
-
-          <span className="loader__percentage">
-            {percentage}%
-          </span>
+          <span className="loader__label">Initializing Portfolio</span>
+          <span className="loader__percentage">{percentage}%</span>
         </div>
 
         <div className="loader__bar">
           <motion.div
             className="loader__bar-fill"
-            style={{
-              width: useTransform(progress, (value) => `${value}%`),
-            }}
+            style={{ width: useTransform(progress, (value) => `${value}%`) }}
+          />
+          <motion.div
+            className="loader__bar-glow"
+            style={{ left: useTransform(progress, (value) => `${value}%`) }}
           />
         </div>
 
@@ -71,12 +79,10 @@ export default function Loader() {
               ? "Compiling interface..."
               : "System ready."}
           </span>
-
           <span className="loader__status-code">
             {percentage < 100 ? "0x" + percentage.toString(16).padStart(2, "0") : "OK"}
           </span>
         </div>
-
       </div>
     </motion.div>
   );

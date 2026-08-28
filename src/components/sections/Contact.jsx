@@ -2,27 +2,25 @@ import { useState, Suspense, lazy } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { FiUser, FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiLoader } from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiSend, FiCheckCircle, FiLoader } from "react-icons/fi";
 import { profile } from "../../data/portfolio";
 import "./Contact.css";
 
 const ConnectOrb = lazy(() => import("../three/ConnectOrb"));
 
-// ---- Fill these in from your EmailJS dashboard (emailjs.com > Account) ----
-const EMAILJS_SERVICE_ID = "service_5a4soop"; 
-const EMAILJS_TEMPLATE_ID = "template_h0rsfmd"; 
+const EMAILJS_SERVICE_ID = "service_5a4soop";
+const EMAILJS_TEMPLATE_ID = "template_h0rsfmd";
 const EMAILJS_PUBLIC_KEY = "YO4ZxhXygM8r7sbBq";
 
-const INFO_CARDS = [
-  { icon: FiUser, label: "Name", value: profile.name, color: "#38c6e0" },
-  { icon: FiPhone, label: "Phone", value: profile.phone, color: "#6c5ce7" },
-  { icon: FiMail, label: "Email", value: profile.email, color: "#ff8a5c" },
-  { icon: FiMapPin, label: "Location", value: profile.location, color: "#00e5a0" },
+const INFO_ROWS = [
+  { icon: FiPhone, value: profile.phone, color: "#6c5ce7" },
+  { icon: FiMapPin, value: profile.location, color: "#00e5a0" },
+  { icon: FiMail, value: profile.email, color: "#38c6e0" },
 ];
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState("idle"); // idle | sending | error
+  const [status, setStatus] = useState("idle");
   const [errors, setErrors] = useState({});
   const [showToast, setShowToast] = useState(false);
 
@@ -44,7 +42,6 @@ export default function Contact() {
     if (!validate()) return;
 
     setStatus("sending");
-
     const minSpinner = new Promise((resolve) => setTimeout(resolve, 3000));
     const sendMail = emailjs.send(
       EMAILJS_SERVICE_ID,
@@ -78,10 +75,9 @@ export default function Contact() {
           <ConnectOrb />
         </Suspense>
       </div>
-      
+
       <div className="container">
         <div className="contact__header">
-          {/* <span className="skills__badge">Get In Touch</span> */}
           <h2>
             LET'S <span className="gradient-text">CONNECT</span>
           </h2>
@@ -89,31 +85,49 @@ export default function Contact() {
         </div>
 
         <div className="contact-layout">
-          <motion.div
-            className="contact-cards"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
-                        {INFO_CARDS.map((item) => (
-              <div key={item.label} className="contact-card" style={{ "--card-color": item.color }}>
-                <span className="contact-card__icon">
-                  <item.icon aria-hidden="true" />
-                </span>
-                <p className="contact-card__value">{item.value}</p>
-              </div>
-            ))}
-          </motion.div>
+          {/* ---- Left: avatar + info ---- */}
+                  <motion.div
+          className="contact-single-card"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          {/* ---- Left: avatar + info ---- */}
+          <div className="contact-info-side">
+                        <motion.div
+              className="contact-avatar"
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <img
+                src={`${import.meta.env.BASE_URL}Hi.gif`}
+                alt="Say hi"
+                className="contact-avatar__gif"
+              />
+            </motion.div>
 
-          <motion.div
-            className="contact-form-panel"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <h3>Contact Us</h3>
+            <div className="contact-info-list">
+              {INFO_ROWS.map((item, i) => (
+                <div key={i} className="contact-info-row" style={{ "--row-color": item.color }}>
+                  <span className="contact-info-row__icon">
+                    <item.icon aria-hidden="true" />
+                  </span>
+                  <p>{item.value}</p>
+                </div>
+              ))}
+            </div>
+             <p className="contact-info-note">
+              Feel free to reach out anytime — I'm always open to discussing
+              new opportunities, collaborations, or interesting projects.
+            </p>
+          </div>
+
+          {/* ---- Right: form ---- */}
+          <div className="contact-form-side">
+            <h3></h3><br></br>
 
             <form onSubmit={handleSubmit} noValidate>
               <div className="cf-field">
@@ -178,15 +192,20 @@ export default function Contact() {
                 )}
               </button>
 
+              <p className="cf-privacy">
+                Your information is safe with us and will never be shared.
+              </p>
+
               {status === "error" && (
                 <p className="cf-status-error">Something went wrong. Please try again.</p>
               )}
             </form>
-          </motion.div>
+          </div>
+        </motion.div>
         </div>
       </div>
 
-            {createPortal(
+      {createPortal(
         <AnimatePresence>
           {showToast && (
             <motion.div

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -16,19 +17,25 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) return <Loader />;
-
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      <AnimatePresence mode="wait">
+        {loading && <Loader key="loader" />}
+      </AnimatePresence>
+
+      {!loading && (
+        <>
+          <Navbar />
+          <main>
+            <Hero />
+            <Skills />
+            <Experience />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
