@@ -13,6 +13,13 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
+    const preload = () => {
+      import("./components/three/FloatingCubes");
+      import("./components/three/RotatingCrystal");
+      import("./components/three/ConnectOrb");
+    };
+    
     const timer = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timer);
   }, []);

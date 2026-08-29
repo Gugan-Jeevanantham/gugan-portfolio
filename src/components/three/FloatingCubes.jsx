@@ -35,7 +35,7 @@ function Cubes() {
       {cubes.map((c, i) => (
         <mesh key={i} position={c.position}>
           <boxGeometry args={[c.size, c.size, c.size]} />
-          <meshBasicMaterial color="#2f6fd6" wireframe transparent opacity={0.3} />
+          <meshBasicMaterial color="#16a34a" wireframe transparent opacity={0.3} />
         </mesh>
       ))}
     </group>

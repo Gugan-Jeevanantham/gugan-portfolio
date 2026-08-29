@@ -5,15 +5,13 @@ import "./Hero.css";
 import { Link as ScrollLink } from "react-scroll";
 import { useRef, useState, useEffect, Suspense, lazy } from "react";
 
-
-
 const NodeNetwork = lazy(() => import("../three/NodeNetwork"));
 
 const STATS = [
-  { icon: FiBriefcase, value: "3+", label: "Years Experience" },
-  { icon: FiCode, value: "120+", label: "UI Bug Fixing" },
-  { icon: FiUsers, value: "10K+", label: "Records Handling" },
-  { icon: FiZap, value: "100%", label: "Commitment" },
+  { icon: FiBriefcase, value: "3+", label: "Years Experience", desc: "Building enterprise ERP solutions" },
+  { icon: FiCode, value: "120+", label: "UI Bug Fixing", desc: "Improved UI/UX and fixed critical bugs" },
+  { icon: FiUsers, value: "10K+", label: "Records Handling", desc: "Optimized data-heavy grids & tables" },
+  { icon: FiZap, value: "40%", label: "Performance Improved", desc: "Faster rendering & optimized workflows" },
 ];
 
 const ROLES = ["Software Engineer", "Frontend Developer", "React.js Developer", "UI Developer", "Web Developer"];
@@ -31,7 +29,7 @@ export default function Hero() {
   const imgWrapRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-    const [roleIndex, setRoleIndex] = useState(0);
+  const [roleIndex, setRoleIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % ROLES.length);
@@ -72,7 +70,7 @@ export default function Hero() {
             {profile.name}
           </motion.h1>
 
-                    <motion.h2 className="hero__role" custom={2} variants={fadeUp}>
+          <motion.h2 className="hero__role" custom={2} variants={fadeUp}>
             <AnimatePresence mode="wait">
               <motion.span
                 key={ROLES[roleIndex]}
@@ -104,7 +102,7 @@ export default function Hero() {
             </ScrollLink>
           </motion.div>
 
-          <motion.div className="hero__stats-bar" custom={5} variants={fadeUp}>
+                    <motion.div className="hero__stats-bar" custom={5} variants={fadeUp}>
             {STATS.map((s) => (
               <div key={s.label} className="hero__stats-bar-item">
                 <span className="hero__stats-bar-icon">
@@ -113,6 +111,7 @@ export default function Hero() {
                 <div>
                   <p className="hero__stats-bar-value">{s.value}</p>
                   <p className="hero__stats-bar-label">{s.label}</p>
+                  <p className="hero__stats-bar-desc">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -134,7 +133,6 @@ export default function Hero() {
           >
             <div className="hero__image-glow" />
             <img src={`${import.meta.env.BASE_URL}Profile.jpeg`} alt={profile.name} className="hero__image" />
-            <div className="hero__image-ring" />
             <span className="hero__available-badge">
               <span className="hero__available-dot" />
               Available for hire

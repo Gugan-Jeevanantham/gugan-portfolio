@@ -22,11 +22,11 @@ function WireOrb() {
     <group>
       <mesh ref={meshRef}>
         <icosahedronGeometry args={[2.2, 1]} />
-        <meshBasicMaterial color="#2f6fd6" wireframe transparent opacity={0.35} />
+        <meshBasicMaterial color="#16a34a" wireframe transparent opacity={0.35} />
       </mesh>
       <mesh ref={innerRef}>
         <icosahedronGeometry args={[1.3, 0]} />
-        <meshBasicMaterial color="#4fa3f0" wireframe transparent opacity={0.5} />
+        <meshBasicMaterial color="#22c55e" wireframe transparent opacity={0.5} />
       </mesh>
     </group>
   );

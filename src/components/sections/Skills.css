@@ -197,7 +197,7 @@
   }
 
   .skills__ticker-pill {
-    font-size: 0.85rem !important;
+   font-size: calc(0.85rem + 2px) !important;
     padding: 5px 10px !important;
     border-radius: 6px !important;
   }
@@ -246,9 +246,10 @@
   font-size: 1.6rem;
   font-weight: 600;
   padding: 16px 30px;
-  background: var(--accent-gradient);
+  background: color-mix(in srgb, var(--accent-cyan) 22%, var(--bg-surface-raised));
+  border: 1px solid var(--border-glow);
   border-radius: 8px;
-  color: #05070d;
+  color: var(--accent-cyan);
   white-space: nowrap;
 }
 

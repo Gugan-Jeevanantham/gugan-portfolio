@@ -1,64 +1,20 @@
-/* :root { */
-  /* ---- Color: dark systems-architecture palette ---- */
-   /* --bg-void: #000000;
-  --bg-surface: #0a0a0a;
-  --bg-surface-raised: #121212;
-  --bg-glass: rgba(19, 26, 46, 0.55);
-
-  --border-hairline: rgba(230, 233, 245, 0.08);
-    --border-glow: rgba(184, 147, 90, 0.35);
-
-  --text-primary: #e8eaf0;
-  --text-muted: #7a8296;
-  --text-faint: #4a5068;
-
-     --accent-violet: #b8935a;
-  --accent-cyan: #d4b483;
-  --accent-gradient: linear-gradient(120deg, #b8935a 0%, #d4b483 100%);
-  --accent-success: #00e5a0; */
-
-  /* ---- Type ---- */
-    /* --font-display: "Sora", "Inter", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace; */
-
-  /* ---- Spacing scale ---- */
-  /* --space-1: 0.4rem;
-  --space-2: 0.8rem;
-  --space-3: 1.6rem;
-  --space-4: 2.4rem;
-  --space-5: 4rem;
-  --space-6: 6.4rem;
-  --space-7: 9.6rem; */
-
-  /* ---- Radius / shadow ---- */
-  /* --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 28px;
-  --shadow-glow: 0 0 60px -12px rgba(108, 92, 231, 0.35);
-
-  --container-max: 1500px;
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-} */
-
-
 :root {
-  /* ---- Color: premium charcoal + gold palette ---- */
-  --bg-void: #121417;
-  --bg-surface: #1b1e23;
-  --bg-surface-raised: #22262e;
-  --bg-glass: rgba(27, 30, 35, 0.55);
+  /* ---- Color: premium dark + green palette ---- */
+  --bg-void: #0d1210;
+  --bg-surface: #141a17;
+  --bg-surface-raised: #1b221e;
+  --bg-glass: rgba(20, 26, 23, 0.55);
 
-  --border-hairline: #2d323c;
-  --border-glow: rgba(47, 111, 214, 0.35);
+  --border-hairline: #2a332e;
+  --border-glow: rgba(34, 197, 94, 0.35);
 
   --text-primary: #e6e8ec;
   --text-muted: #9da3af;
   --text-faint: #6b7280;
 
-    --accent-violet: #2f6fd6;
-  --accent-cyan: #4fa3f0;
-  --accent-gradient: linear-gradient(120deg, #2f6fd6 0%, #4fa3f0 100%);
+  --accent-violet: #16a34a;
+  --accent-cyan: #22c55e;
+  --accent-gradient: linear-gradient(120deg, #16a34a 0%, #22c55e 100%);
   --accent-success: #00e5a0;
 
   /* ---- Type ---- */
@@ -79,7 +35,7 @@
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 28px;
-  --shadow-glow: 0 0 60px -12px rgba(47, 111, 214, 0.35);
+  --shadow-glow: 0 0 60px -12px rgba(34, 197, 94, 0.35);
 
   --container-max: 1480px;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

@@ -71,13 +71,13 @@ function Network() {
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[linePositions, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#2f6fd6" transparent opacity={0.35} />
+        <lineBasicMaterial color="#16a34a" transparent opacity={0.35} />
       </lineSegments>
       <points>
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[pointPositions, 3]} />
         </bufferGeometry>
-        <pointsMaterial color="#4fa3f0" size={0.06} sizeAttenuation transparent opacity={0.9} />
+        <pointsMaterial color="#22c55e" size={0.06} sizeAttenuation transparent opacity={0.9} />
       </points>
     </group>
   );

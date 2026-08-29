@@ -15,7 +15,7 @@ function Crystal() {
   return (
     <mesh ref={ref}>
       <octahedronGeometry args={[2, 0]} />
-      <meshBasicMaterial color="#4fa3f0" wireframe transparent opacity={0.4} />
+      <meshBasicMaterial color="#22c55e" wireframe transparent opacity={0.4} />
     </mesh>
   );
 }

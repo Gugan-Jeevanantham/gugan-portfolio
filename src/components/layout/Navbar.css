@@ -45,7 +45,7 @@
 }
 
 .navbar__cta:hover {
-  box-shadow: 0 0 20px rgba(47, 111, 214, 0.35);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
   transform: translateY(-2px);
 }
 
@@ -83,7 +83,7 @@
 .navbar__link--active {
   color: #05070d;
   background: var(--accent-gradient);
-  box-shadow: 0 0 20px rgba(47, 111, 214, 0.35);
+   box-shadow: 0 0 20px rgba(34, 197, 94, 0.35);
 }
 
 .navbar__logo {
