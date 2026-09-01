@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gugan-jeevanantham.github.io/gugan-portfolio/sitemap.xml
