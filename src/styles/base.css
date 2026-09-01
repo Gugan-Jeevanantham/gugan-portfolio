@@ -51,8 +51,8 @@ img {
   padding-inline: var(--space-4);
 }
 
-@media (max-width: 768px) {
-  .container {
+@media (--bp-tablet-md) {
+    .container {
     padding-inline: var(--space-3);
   }
 }

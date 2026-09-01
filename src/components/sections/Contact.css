@@ -232,13 +232,13 @@ textarea.cf-input {
   box-shadow: 0 20px 50px -16px rgba(0, 229, 160, 0.35);
 }
 
-@media (max-width: 860px) {
-  .contact-layout {
+@media (--bp-tablet-lg) {
+  .contact-single-card {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 480px) {
+@media (--bp-mobile) {
   .contact-cards {
     grid-template-columns: 1fr;
   }

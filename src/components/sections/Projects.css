@@ -223,13 +223,13 @@
   border: 1px solid var(--border-hairline);
 }
 
-@media (max-width: 1100px) {
+@media (--bp-laptop) {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 860px) {
+@media (--bp-tablet-lg) {
   .flagship-card {
     grid-template-columns: 1fr;
   }
@@ -239,7 +239,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (--bp-mobile-lg) {
   .bento-grid {
     grid-template-columns: 1fr;
   }

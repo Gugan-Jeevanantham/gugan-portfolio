@@ -261,7 +261,7 @@
   place-items: center;
 }
 
-@media (max-width: 640px) {
+@media (--bp-tablet-sm) {
   .experience__item {
     grid-template-columns: 36px 1fr;
     column-gap: 14px;
