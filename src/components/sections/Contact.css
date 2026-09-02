@@ -277,7 +277,8 @@ textarea.cf-input {
 }
 
 .contact-form-side {
-  padding: var(--space-4) var(--space-4);   /* ⬅️ padding குறைச்சது */
+ padding: var(--space-4) var(--space-4);
+  padding-top: calc(var(--space-4) + 1.8rem);
 }
 
 .contact-avatar {

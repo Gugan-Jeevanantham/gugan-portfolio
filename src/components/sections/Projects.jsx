@@ -5,6 +5,7 @@ import { projects } from "../../data/portfolio";
 import ConstructionVisual from "../ui/ConstructionVisual";
 import { Suspense, lazy } from "react";
 import "./Projects.css";
+import Card from "../ui/Card";
 
 const ICONS = { FaGamepad, FaUtensils, FaHeart, FaRobot };
 const RotatingCrystal = lazy(() => import("../three/RotatingCrystal"));
@@ -59,42 +60,20 @@ export default function Projects() {
           </div>
         </motion.a>
 
-        {/* ---- Bento grid of personal projects ---- */}
+                {/* ---- Bento grid of personal projects ---- */}
         <div className="bento-grid">
-          {side.map((project, i) => {
-            const Icon = ICONS[project.icon];
-            return (
-              <motion.a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={project.name}
-                className="bento-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ y: -8 }}
-                style={{ "--proj-color": project.color }}
-              >
-                <div className="bento-card__top">
-                  <span className="bento-card__icon">
-                    <Icon aria-hidden="true" />
-                  </span>
-                  <FiExternalLink className="bento-card__external" aria-hidden="true" />
-                </div>
-
-                <h4>{project.name}</h4>
-                <p>{project.description}</p>
-
-                <div className="bento-card__tech">
-                  {project.tech.map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
-                </div>
-              </motion.a>
-            );
-          })}
+          {side.map((project, i) => (
+            <Card
+              key={project.name}
+              href={project.link}
+              icon={ICONS[project.icon]}
+              color={project.color}
+              title={project.name}
+              description={project.description}
+              tags={project.tech}
+              index={i}
+            />
+          ))}
         </div>
       </div>
     </section>

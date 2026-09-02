@@ -6,7 +6,7 @@ export const profile = {
   email: "guganjeevanantham987@gmail.com",
   phone: "+91 99447 17243",
     location: "Coimbatore, Tamil Nadu, India",
-  resumeFile: "/Gugan_Software_Engineer_Resume.pdf",
+  resumeFile: "Gugan_Software_Engineer_Resume.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/j-gugan-jeevanantham",
     github: "https://github.com/Gugan-Jeevanantham",
@@ -38,6 +38,9 @@ export const skillsList = [
   { name: "MySQL", icon: "SiMysql", color: "#4479a1" },
   { name: "Git", icon: "SiGit", color: "#f05032" },
   { name: "GitHub", icon: "SiGithub", color: "#e8eaf0" },
+  { name: "ChatGPT", icon: "FaRobot", color: "#10a37f" },
+{ name: "Claude AI", icon: "FaBrain", color: "#d97757" },
+{ name: "GitHub Copilot", icon: "FaWandMagicSparkles", color: "#8957e5" },
 ];
 
 export const skillTicker = [

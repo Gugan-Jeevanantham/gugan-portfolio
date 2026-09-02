@@ -102,11 +102,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <img
-                src={`${import.meta.env.BASE_URL}Hi.gif`}
-                alt="Say hi"
-                className="contact-avatar__gif"
-              />
+              <img src={`${import.meta.env.BASE_URL}Hi.gif`} alt="Say hi" className="contact-avatar__gif" loading="lazy" />
             </motion.div>
 
             <div className="contact-info-list">
@@ -126,9 +122,7 @@ export default function Contact() {
           </div>
 
           {/* ---- Right: form ---- */}
-          <div className="contact-form-side">
-            <h3></h3><br></br>
-
+            <div className="contact-form-side">
             <form onSubmit={handleSubmit} noValidate>
               <div className="cf-field">
                 <input

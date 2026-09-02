@@ -4,6 +4,7 @@ import { profile } from "../../data/portfolio";
 import "./Hero.css";
 import { Link as ScrollLink } from "react-scroll";
 import { useRef, useState, useEffect, Suspense, lazy } from "react";
+import Button from "../ui/Button";
 
 const NodeNetwork = lazy(() => import("../three/NodeNetwork"));
 
@@ -90,13 +91,13 @@ export default function Hero() {
             3+ years of experience turning complex business workflows into reliable, high-performance applications with JavaScript, React.js, API Integration and modern UI technologies.
           </motion.p>
 
-          <motion.div className="hero__cta" custom={4} variants={fadeUp}>
-            <a href={profile.resumeFile} download className="btn btn--primary">
+            <motion.div className="hero__cta" custom={4} variants={fadeUp}>
+            <Button href={`${import.meta.env.BASE_URL}${profile.resumeFile}`} download variant="primary">
               View Resume <FiDownload aria-hidden="true" />
-            </a>
-            <ScrollLink to="projects" smooth duration={500} offset={-60} className="btn btn--ghost">
+            </Button>
+            <Button scrollTo="projects" variant="ghost">
               View Projects <FiArrowRight aria-hidden="true" />
-            </ScrollLink>
+            </Button>
             <ScrollLink to="contact" smooth duration={500} offset={-60} className="hero__talk-link">
               Let's Talk <FiArrowRight aria-hidden="true" />
             </ScrollLink>
@@ -132,7 +133,7 @@ export default function Hero() {
             style={{ transform: `rotateY(${tilt.x}deg) rotateX(${tilt.y}deg)` }}
           >
             <div className="hero__image-glow" />
-            <img src={`${import.meta.env.BASE_URL}Profile.jpeg`} alt={profile.name} className="hero__image" />
+            <img src={`${import.meta.env.BASE_URL}Profile.webp`} alt={profile.name} className="hero__image" loading="eager" fetchpriority="high" />
             <span className="hero__available-badge">
               <span className="hero__available-dot" />
               Available for hire

@@ -128,3 +128,22 @@ html {
   scrollbar-color: var(--bg-surface-raised) var(--bg-void);
   scrollbar-width: thin;
 }
+
+/* ---- Skip to content (accessibility) ---- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  background: var(--accent-cyan);
+  color: #05070d;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}

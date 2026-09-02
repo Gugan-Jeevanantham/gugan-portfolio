@@ -24,8 +24,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return (
+    return (
     <>
+      <a href="#main-content" className="skip-link">
+        Skip to content
+      </a>
+
       <AnimatePresence mode="wait">
         {loading && <Loader key="loader" />}
       </AnimatePresence>
@@ -33,7 +37,7 @@ function App() {
       {!loading && (
         <>
           <Navbar />
-          <main>
+          <main id="main-content">
             <Hero />
             <Skills />
             <Experience />

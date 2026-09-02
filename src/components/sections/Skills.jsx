@@ -16,6 +16,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { FaCss3Alt } from "react-icons/fa";
+import { FaRobot, FaBrain, FaWandMagicSparkles } from "react-icons/fa6";
 import { TbSql } from "react-icons/tb";
 import { FiGrid } from "react-icons/fi";
 import { skillsList, skillTicker } from "../../data/portfolio";
@@ -37,6 +38,9 @@ const ICONS = {
   SiPostgresql,
   SiTailwindcss,
   FiGrid,
+  FaRobot,
+  FaBrain,
+  FaWandMagicSparkles,
 };
 
 const FloatingCubes = lazy(() => import("../three/FloatingCubes"));
