@@ -96,7 +96,7 @@ export default function Skills() {
           <h2>
             TECHNICAL <span className="gradient-text">SKILLS</span>
           </h2>
-<p>TOOLS AND TECHNOLOGIES I USE TO BUILD SCALABLE, PRODUCTION-READY APPLICATIONS</p>        
+<p>THE TOOLS AND TECHNOLOGIES I USE TO BUILD RELIABLE APPLICATIONS</p>        
 </div>
 
         <div className="skills__icon-grid">

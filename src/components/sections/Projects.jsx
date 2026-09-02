@@ -21,7 +21,7 @@ export default function Projects() {
           <h2>
             FEATURED <span className="gradient-text">PROJECTS</span>
           </h2>
-<p>A SELECTION OF PRODUCTION AND PERSONAL PROJECTS THAT SHOWCASE MY ENGINEERING APPROACH</p>        </div>
+<p>A SELECTION OF PROJECTS THAT SHOWCASE MY ENGINEERING SKILLS</p>        </div>
 
         {/* ---- Flagship spotlight ---- */}
         <motion.a
