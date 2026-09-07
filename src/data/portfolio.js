@@ -137,7 +137,7 @@ export const projects = {
       tech: ["JavaScript", "HTML5", "CSS3"],
       link: "https://gugan-jeevanantham.github.io/keydash/",
       icon: "FaKeyboard",
-      color: "#22c55e",
+      color: "#F0560A",
     },
     {
       name: "AI Document Q&A",
