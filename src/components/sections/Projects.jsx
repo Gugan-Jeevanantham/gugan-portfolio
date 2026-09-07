@@ -7,7 +7,7 @@ import { Suspense, lazy } from "react";
 import "./Projects.css";
 import Card from "../ui/Card";
 
-const ICONS = { FaGamepad, FaUtensils, FaHeart, FaRobot };
+const ICONS = { FaGamepad, FaUtensils, FaKeyboard, FaRobot };
 const RotatingCrystal = lazy(() => import("../three/RotatingCrystal"));
 
 export default function Projects() {
