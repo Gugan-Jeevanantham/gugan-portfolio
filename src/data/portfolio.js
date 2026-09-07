@@ -132,12 +132,12 @@ export const projects = {
       color: "#ffa94d",
     },
     {
-      name: "Our Story",
-      description: "A playful, indirect proposal page — gender-based storytelling with humor woven in at every turn, building up to one big reveal.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      link: "https://gugan-jeevanantham.github.io/our-story/",
-      icon: "FaHeart",
-      color: "#ff6bcb",
+      name: "KeyDash",
+      description: "A responsive typing speed test — real-time WPM, accuracy, error tracking, customizable test durations, and difficulty levels.",
+      tech: ["JavaScript", "HTML5", "CSS3"],
+      link: "https://gugan-jeevanantham.github.io/keydash/",
+      icon: "FaKeyboard",
+      color: "#22c55e",
     },
     {
       name: "AI Document Q&A",
