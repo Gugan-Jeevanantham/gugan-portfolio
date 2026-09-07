@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGamepad, FaUtensils, FaHeart, FaRobot } from "react-icons/fa6";
+import { FaGamepad, FaUtensils, FaKeyboard, FaRobot } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 import { projects } from "../../data/portfolio";
 import ConstructionVisual from "../ui/ConstructionVisual";
